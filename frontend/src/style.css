@@ -1,0 +1,585 @@
+* {
+    box-sizing: border-box;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 240px;
+    background: #1f2937;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    margin-bottom: 30px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav button {
+    border: none;
+    background: transparent;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+nav button:hover {
+    background: #374151;
+}
+
+nav button.active {
+    background: #4b5563;
+}
+
+/* CONTENT */
+
+.content {
+    flex: 1;
+    padding: 40px;
+    background: #f3f4f6;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+/* PAGE HEADER */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-header p {
+    margin-top: 5px;
+    color: #6b7280;
+}
+
+/* BUTTONS */
+
+.add-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-button:hover {
+    background: #1d4ed8;
+}
+
+/* TABLE */
+
+.table-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ACTION BUTTONS */
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background: #e5e7eb;
+}
+
+.delete-button {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.edit-button:hover {
+    background: #d1d5db;
+}
+
+.delete-button:hover {
+    background: #fecaca;
+}
+
+/* MODAL */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* MODAL BOX */
+
+.modal {
+    width: 450px;
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* MODAL HEADER */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.close-button {
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #6b7280;
+}
+
+/* FORM */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* MODAL BUTTONS */
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.cancel-button {
+    border: none;
+    background: #e5e7eb;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background: #d1d5db;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.logout-button {
+    margin-top: auto;
+    border: none;
+    background: #ff0019;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.logout-button:hover {
+    background: #ff3131;
+}
+
+/* TEO SELECTION */
+
+.teo-selection {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.teo-selection label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.teo-selection select {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.teo-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+}
+
+.student-list {
+    padding: 20px;
+}
+
+.student-list h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.student-select {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 5px;
+}
+
+.student-select:hover {
+    background: #f3f4f6;
+}
+
+.student-select.selected {
+    background: #e5e7eb;
+}
+
+.student-select span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.student-select small {
+    color: #6b7280;
+}
+
+/* ACCORDION STYLES */
+
+.teo-accordion {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.teo-accordion-header {
+    width: 100%;
+    border: none;
+    background: #ffffff;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
+}
+
+.teo-accordion-header:hover {
+    background: #f9fafb;
+}
+
+.teo-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.teo-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #6b7280;
+    text-transform: uppercase;
+}
+
+.teo-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1d4ed8;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.teo-accordion-content {
+    border-top: 1px solid #e5e7eb;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.teo-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.teo-card h2 {
+    margin-top: 0;
+}
+
+.student-class {
+    color: #6b7280;
+    margin-top: -10px;
+}
+
+.calendar {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.calendar h3 {
+    margin-top: 0;
+}
+
+.date-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.teo-details {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.teo-details h3 {
+    margin-bottom: 20px;
+}
+
+.teo-card select,
+.teo-card input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.teo-card select:focus,
+.teo-card input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.existing-teos {
+    margin-top: 25px;
+}
+
+.existing-teos h3 {
+    margin-bottom: 15px;
+}
+
+.teo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.teo-item {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    background: white;
+    padding: 15px 18px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.teo-item:hover {
+    background: #f9fafb;
+}
+
+.teo-item.selected {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+.teo-item strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.teo-item small {
+    display: block;
+    color: #6b7280;
+}
+
+.teo-summary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.teo-arrow {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.diary-section {
+    margin-top: 25px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+}
+
+.diary-entry {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+}
+
+.diary-entry p {
+    margin: 8px 0 0 0;
+    white-space: pre-wrap;
+}
+
+.no-teos {
+    color: #6b7280;
+    padding: 10px 0;
+}
+
+/* PÄIVÄKIRJA */
+
+.diary-section {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.diary-entries {
+    margin-top: 20px;
+}
+
+.diary-entry {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+.diary-entry strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.diary-entry p {
+    margin: 0;
+    white-space: pre-wrap;
+}
