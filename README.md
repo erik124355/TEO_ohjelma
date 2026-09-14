@@ -9,10 +9,12 @@ Lataa projektikansio ja pura se haluamaasi paikkaan. Avaa projektin juurikansio 
 Avaa kaksi terminaali-ikkunaa:
 
 - **Terminaali 1:** siirry backend-kansioon:
+
   ```bash
   cd backnd
   ```
 - **Terminaali 2:** siirry frontend-kansioon:
+
   ```bash
   cd frontend
   ```
@@ -39,7 +41,7 @@ Projektin backend-kansiossa on `.env`-tiedosto. Kirjoita siihen oman tietokantas
 
 ## 6. Käynnistä backend
 
-Projektin backend kansiossa terminaalissa käynnistä palvelin:
+Backend-kansiossa terminaalissa käynnistä palvelin:
 
 ```bash
 nodemon server.js
