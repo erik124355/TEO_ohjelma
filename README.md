@@ -8,7 +8,10 @@ Lataa projektikansio ja pura se haluamaasi paikkaan. Avaa projektin juurikansio 
 
 Avaa kaksi terminaali-ikkunaa:
 
-- **Terminaali 1:** pysy projektin juurikansiossa.
+- **Terminaali 1:** siirry backend-kansioon:
+  ```bash
+  cd backnd
+  ```
 - **Terminaali 2:** siirry frontend-kansioon:
   ```bash
   cd frontend
@@ -26,11 +29,11 @@ Tämä asentaa projektin tarvitsemat paketit.
 
 ## 4. Tuo tietokanta
 
-Projektin juurikansiossa on tietokantatiedosto. Avaa phpMyAdmin ja tuo kyseinen `.sql`-tiedosto tietokantaan.
+Projektin backend-kansiossa on tietokantatiedosto. Avaa phpMyAdmin ja tuo kyseinen `.sql`-tiedosto tietokantaan.
 
 ## 5. Määritä .env-tiedosto
 
-Projektin juurikansiossa on `.env`-tiedosto. Kirjoita siihen oman tietokantasi tiedot.
+Projektin backend-kansiossa on `.env`-tiedosto. Kirjoita siihen oman tietokantasi tiedot.
 
 > Varmista, että tietokannan nimi, käyttäjätunnus ja salasana vastaavat omaa MySQL-tietokantaasi.
 
@@ -39,7 +42,6 @@ Projektin juurikansiossa on `.env`-tiedosto. Kirjoita siihen oman tietokantasi t
 Projektin backend kansiossa terminaalissa käynnistä palvelin:
 
 ```bash
-cd backend
 nodemon server.js
 ```
 
