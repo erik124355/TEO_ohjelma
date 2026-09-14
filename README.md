@@ -36,9 +36,10 @@ Projektin juurikansiossa on `.env`-tiedosto. Kirjoita siihen oman tietokantasi t
 
 ## 6. Käynnistä backend
 
-Projektin juurikansion terminaalissa käynnistä palvelin:
+Projektin backend kansiossa terminaalissa käynnistä palvelin:
 
 ```bash
+cd backend
 nodemon server.js
 ```
 
